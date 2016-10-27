@@ -1,6 +1,3 @@
-
-		
-	
 import urllib
 import sys
 from bs4 import BeautifulSoup
@@ -37,9 +34,9 @@ for l in soup1.find_all('a', {'class': 'l'}):
 	li = l.get('href')
 	break
 
-f = file('-----Your path---------'+command+'.mp4', 'w')
+f = file('"Your path"'+command+'.mp4', 'w')
 url = urllib.urlopen(li)
-print 'Wait, your video is being downloaded'
+print 'Please wait, your video is being downloaded'
 blocksize = 8192
 size = url.info().getheaders('Content-Length')[0]
 size = float(size)
@@ -56,6 +53,7 @@ sys.stdout.flush()
 print "\n"
 
 f.close()	
-print 'Your video has been downloaded...Enjoy!'	
+print 'Your video has been downloaded...Enjoy!'
+print 'Project made by the XMen'
 	
 
